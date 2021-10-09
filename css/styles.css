@@ -1,0 +1,72 @@
+html,
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background-color: darkslategray;
+  padding: 2rem;
+}
+
+header a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 30px;
+  margin-left: 90px;
+}
+
+h1 {
+  margin-left: 20%;
+  color: darkslategray;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+form {
+  margin-left: 20%;
+}
+
+input {
+  padding: 10px;
+  width: 400px;
+}
+
+.formError {
+  color: red;
+  font-size: 15px;
+  display: none;
+}
+
+button {
+  margin-top: 30px;
+  width: 400px;
+  height: 50px;
+  color: white;
+  background-color: darkslategrey;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+p {
+  color: darkslategray;
+  font-size: 20px;
+}
+
+#signedIn {
+  margin-left: 0;
+  text-align: center;
+  color: darkslategrey;
+  margin-top: 5%;
+}
+
+.far {
+  font-size: 150px;
+  color: darkslategrey;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  margin-top: 50px;
+}
