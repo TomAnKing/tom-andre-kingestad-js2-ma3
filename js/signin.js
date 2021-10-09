@@ -7,7 +7,7 @@ const userName = document.querySelector("#email");
 const userNameError = document.querySelector("#emailError");
 const password = document.querySelector("#password");
 const passwordError = document.querySelector("#passwordError");
-const message = document.querySelector(".message-container");
+const message = document.querySelector(".messageContainer");
 
 form.addEventListener("submit", validateForm);
 
@@ -20,7 +20,7 @@ function validateForm(event) {
   const passwordValue = password.value.trim();
 
   if (usernameValue.length === 0 || passwordValue.length === 0) {
-    return displayMessage("Invalid values", ".message-container");
+    return displayMessage("Invalid values", ".messageContainer");
   }
 
   completeLogin(usernameValue, passwordValue);
@@ -51,7 +51,9 @@ async function completeLogin(username, password) {
     }
 
     if (!json.jwt) {
-      displayMessage("Wrong username or password", ".message-container");
+      displayMessage("Wrong username or password", ".messageContainer");
     }
-  } catch (error) {}
+  } catch (error) {
+    displayMessage("An error has occured", ".messageContainer");
+  }
 }
