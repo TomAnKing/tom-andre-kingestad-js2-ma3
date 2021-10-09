@@ -42,7 +42,6 @@ async function completeLogin(username, password) {
   try {
     const response = await fetch(url, options);
     const json = await response.json();
-    console.log(json);
 
     if (json.user) {
       window.location = "signedIn.html";
@@ -54,7 +53,5 @@ async function completeLogin(username, password) {
     if (!json.jwt) {
       displayMessage("Wrong username or password", ".message-container");
     }
-  } catch (error) {
-    console.log("error");
-  }
+  } catch (error) {}
 }
