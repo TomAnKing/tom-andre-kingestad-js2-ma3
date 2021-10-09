@@ -1,3 +1,7 @@
+/* import displayMessage from "./components/displayMessage.js";
+import { saveToken, saveUser } from "./utils/storage.js";
+import { baseUrl } from "./settings/api.js"; */
+
 const form = document.querySelector("#loginForm");
 const userName = document.querySelector("#email");
 const userNameError = document.querySelector("#emailError");
@@ -35,3 +39,24 @@ function validateEmail(email) {
   const patternMatches = regEx.test(email);
   return patternMatches;
 }
+
+/* async function completeLogin() {
+  const url = baseUrl + "auth/local";
+
+  const data = JSON.stringify({ identifier: username, password: password });
+
+  const options = {
+    method: "POST",
+    body: data,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const json = await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+} */
